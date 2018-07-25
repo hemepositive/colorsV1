@@ -1,0 +1,53 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.mountNode {
+  display: flex;
+  color: #000;
+}
+.game {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  margin: 0.25rem auto;
+}
+.target {
+  border: thin solid #999;
+  width: 300px;
+  height: 75px;
+  font-size: 45px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ccc;
+}
+.challenge-numbers {
+  width: 100%;
+  margin: 1.5rem auto;
+}
+.number {
+  border: thin solid lightgray;
+  background-color: #eee;
+  width: 40%;
+  text-align: center;
+  font-size: 36px;
+  border-radius: 5px;
+  margin: 1rem 5%;
+  display: inline-block;
+}
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.timer-value {
+  color: darkgreen;
+  font-size: 150%;
+}
+
+.colorDiv {
+  width: 300px;
+  height: 150px;
+}
