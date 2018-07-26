@@ -2,7 +2,7 @@ export const colors = [
   "aqua",
   "black",
   "blue",
-  "fusia",
+  "fuscia",
   "gray",
   "green",
   "lime",

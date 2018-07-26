@@ -38,6 +38,13 @@ class Game extends React.Component {
       if (newColor !== this.activeColor) {
         this.colorsList.push(newColor);
       }
+      this.colorsList.sort(() => Math.random() - 0.5);
+    }
+  };
+
+  handleColorClick = selected => {
+    if (selected === this.activeColor) {
+      this.gameStatus = "won";
     }
   };
 
@@ -90,7 +97,15 @@ class Game extends React.Component {
           )}
         </div>
         <Color color={this.activeColor} />
-        <Grid>{this.colorsList.map(color => <Name name={color} />)}</Grid>
+        <Grid>
+          {this.colorsList.map(color => (
+            <Name
+              key={this.randomNumberBetween(1, 1000000)}
+              name={color}
+              handleColorClick={this.handleColorClick}
+            />
+          ))}
+        </Grid>
       </div>
     );
   }
@@ -103,6 +118,7 @@ decorate(Game, {
   changeGameStatus: action,
   startGame: action,
   gameLost: action,
+  handleColorClick: action,
   outOfTime: computed
 });
 
